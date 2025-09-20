@@ -1,0 +1,67 @@
+:root{
+  --card-bg: rgba(255,255,255,0.9);
+  --accent: #7c5cff;
+  --success: #28c76f;
+  --danger: #ff6b6b;
+  --warning: #f59e0b;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#1f2937;background:linear-gradient(135deg,#8ec5ff 0%, #e0c3fc 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.app{width:100%;max-width:960px}
+
+.screen{display:none}
+.screen.active{display:block}
+
+.card{background:var(--card-bg);backdrop-filter: blur(6px);padding:36px;border-radius:16px;box-shadow:0 10px 30px rgba(20,20,60,0.12);text-align:center}
+h1{margin:0 0 8px;font-size:28px;color:#111827}
+p{margin:0 0 18px;color:#4b5563}
+
+.btn{appearance:none;border:0;padding:10px 18px;border-radius:10px;font-weight:600;cursor:pointer;transition:transform .12s ease, box-shadow .12s;}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#ff8a80);color:white;box-shadow:0 6px 18px rgba(124,92,255,0.24)}
+.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06)}
+
+/* Scene */
+.scene{position:relative;background:linear-gradient(180deg,#f8fafc, #eef2ff);height:240px;border-radius:12px;margin:18px 0;padding:16px;display:flex;align-items:center;justify-content:flex-start;overflow:hidden}
+.char{font-size:56px;display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff0);box-shadow:0 6px 18px rgba(0,0,0,0.08);position:relative;transition:transform 900ms cubic-bezier(.2,.9,.3,1), filter .2s}
+.object{margin-left:48px;font-size:72px}
+
+.question{font-size:18px;margin:8px 0 10px;color:#111827}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.choice{padding:12px;border-radius:10px;background:white;border:1px solid rgba(15,23,42,0.06);cursor:pointer;text-align:center;font-weight:600;transition:all .18s}
+.choice:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(18,21,41,0.06)}
+.choice.correct{background:linear-gradient(90deg,var(--success),#86e3a9);color:#064e3b}
+.choice.wrong{background:linear-gradient(90deg,#ffd3d3,var(--danger));color:#7f1d1d}
+
+.result{height:44px;margin-top:12px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:8px}
+.result.success{background:linear-gradient(90deg,#ecfdf5,#bbf7d0);color:#065f46}
+.result.fail{background:linear-gradient(90deg,#fff1f2,#ffd6d6);color:#7f1d1d}
+
+/* Stats */
+.stats-container{margin:20px 0}
+.stats-summary{font-size:20px;font-weight:700;margin:15px 0}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:20px 0}
+.stat-box{padding:15px;border-radius:10px;background:white;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.stat-box.correct{background:linear-gradient(90deg,#ecfdf5,#bbf7d0);border-left:4px solid var(--success)}
+.stat-box.wrong{background:linear-gradient(90deg,#fff1f2,#ffd6d6);border-left:4px solid var(--danger)}
+.stat-box.total{background:linear-gradient(90deg,#fef3c7,#fde68a);border-left:4px solid var(--warning)}
+.stat-number{font-size:24px;font-weight:800;margin:5px 0}
+.stat-label{font-size:14px;color:#6b7280}
+.progress-bar{height:8px;background:#e5e7eb;border-radius:4px;margin:15px 0;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--success),#86e3a9);border-radius:4px}
+.percentage{font-size:18px;font-weight:700;margin:10px 0}
+
+/* Review */
+.review-item{background:white;padding:20px;margin:15px 0;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);text-align:left}
+.review-question{font-weight:700;margin-bottom:10px;color:#111827}
+.review-choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.review-choice{padding:8px;border-radius:6px;background:#f8fafc;border:1px solid #e2e8f0}
+.review-choice.correct{background:linear-gradient(90deg,#ecfdf5,#bbf7d0);border-color:var(--success);font-weight:600}
+.review-choice.wrong{background:linear-gradient(90deg,#fff1f2,#ffd6d6);border-color:var(--danger)}
+
+.shake{animation:shake .45s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}50%{transform:translateX(8px)}75%{transform:translateX(-5px)}}
+.jump{animation:jump .8s ease forwards}
+@keyframes jump{0%{transform:translateY(0)}50%{transform:translateY(-60px)}100%{transform:translateY(0)}}
+.angry{animation:angry .8s ease forwards}
+@keyframes angry{0%{transform:scale(1)}50%{transform:scale(1.2) rotate(-10deg)}100%{transform:scale(1)}}
