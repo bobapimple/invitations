@@ -1,64 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cat Wall Quiz — English Task</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Women's Day Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="app">
-    <section id="welcome" class="screen active">
-      <div class="card">
-        <h1>Welcome to the Cat Adventure!</h1>
-        <p>Help the cat by choosing the correct English phrases to overcome obstacles.</p>
-        <button id="playBtn" class="btn primary">Play</button>
-      </div>
-    </section>
+    <div class="overlay" id="overlay"></div>
+    <div class="floral-bg" id="floralBg"></div>
 
-    <section id="game" class="screen" aria-hidden="true">
-      <div class="card">
-        <div class="scene" id="scene">
-          <div class="char" id="cat">🐱</div>
-          <div class="object" id="object">🧱</div>
-          <div class="goal" id="goal">🏁</div>
+    <div class="envelope-wrapper" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="seal">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                <path
+                    d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.41,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.59,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+            </svg>
         </div>
-
-        <div class="question" id="questionText"></div>
-        <div class="choices" id="choices"></div>
-        <div id="result" class="result"></div>
-
-        <div style="display:flex;gap:10px;justify-content:center;margin-top:12px">
-          <button id="next" class="btn primary" hidden>Next</button>
-          <button id="retry" class="btn" hidden>Try again</button>
-          <button id="finish" class="btn ghost">Finish Game</button>
-          <button id="home" class="btn ghost">Home</button>
+        <div class="letter">
+            <h1>You're Invited</h1>
+            <p class="intro">To an evening of elegance and celebration as we honor the remarkable women in our lives.
+            </p>
+            <div class="details">
+                <p><strong>Date</strong> Saturday, March 7th 2026</p>
+                <p><strong>Time</strong> 6:00 PM onwards</p>
+                <p><strong>Place</strong> The Garden Bistro, Downtown</p>
+            </div>
+            <button id="closeBtn">Close Invitation</button>
         </div>
-      </div>
-    </section>
+    </div>
 
-    <section id="stats" class="screen" aria-hidden="true">
-      <div class="card">
-        <h1>Game Results</h1>
-        <div id="stats-content"></div>
-        <div style="margin-top:24px; display:flex; gap:10px; justify-content:center">
-          <button id="review-wrong" class="btn primary" hidden>Review Wrong Answers</button>
-          <button id="stats-home" class="btn ghost">Play Again</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="review" class="screen" aria-hidden="true">
-      <div class="card">
-        <h1>Review Your Mistakes</h1>
-        <div id="review-content"></div>
-        <div style="margin-top:24px">
-          <button id="back-to-stats" class="btn ghost">Back to Results</button>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
