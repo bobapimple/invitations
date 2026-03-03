@@ -45,9 +45,6 @@ body {
     height: 100%;
     background: rgba(109, 46, 70, 0.2);
     /* Slightly darker for contrast */
-    backdrop-filter: blur(10px);
-    /* Move blur here */
-    -webkit-backdrop-filter: blur(10px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease;
